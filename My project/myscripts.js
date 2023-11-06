@@ -175,7 +175,16 @@ $(".ccart").click(function() {
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
 
+    // Play a sound when the product is added to the cart
+    var audio = new Audio('notification.mp3');
+    audio.play();
+
+    // Update the cart display
+    updateCart();
 });
+
+// Rest of your code remains unchanged...
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
